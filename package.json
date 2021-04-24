@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc --declaration",
-    "dev": "ts-node-dev src/index.ts"
+    "dev": "ts-node-dev src/index.ts",
+    "test": "ts-node-dev src/test/index.ts"
   },
   "repository": "https://github.com/Theryston/db-mycro.git",
   "author": "Theryston <funktodo2@gmail.com>",
