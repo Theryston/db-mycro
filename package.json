@@ -1,0 +1,10 @@
+{
+  "name": "db-mycro",
+  "version": "0.0.0",
+  "description": "a database that saves your data in a json file in your project folder.",
+  "main": "src/index.ts",
+  "repository": "https://github.com/Theryston/db-mycro.git",
+  "author": "Theryston <funktodo2@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
