@@ -7,7 +7,9 @@
   "scripts": {
     "build": "tsc --declaration",
     "dev": "nodemon --watch src --exec \"ts-node-dev src/index.ts\" -e ts",
-    "test": "nodemon --watch src --exec \"ts-node-dev src/**.test.ts\" -e ts"
+    "test": "nodemon --watch src --exec \"ts-node-dev src/**.test.ts\" -e ts",
+    "test:repository": "nodemon --watch src --exec \"ts-node-dev src/repository/**.test.ts\" -e ts",
+    "test:database": "nodemon --watch src --exec \"ts-node-dev src/database/**.test.ts\" -e ts"
   },
   "repository": "https://github.com/Theryston/db-mycro.git",
   "author": "Theryston <funktodo2@gmail.com>",
