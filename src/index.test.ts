@@ -1,6 +1,6 @@
 import { Database, Repository } from './index';
 
-const DBtestes = new Database('testes')
+const DBtestes = new Database('test', __dirname+'/../')
 const test = new Repository({
   name: 'testando',
   columns: [
