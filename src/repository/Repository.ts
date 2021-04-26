@@ -16,6 +16,12 @@ interface IRepository {
   db: Database;
 }
 
+interface IFind {
+  where ? : string;
+  offset ? : number;
+  limit ? : number;
+}
+
 export class Repository {
   public name: string;
   public db: Database;
@@ -89,5 +95,29 @@ export class Repository {
   public save() {
     const datas = JSON.stringify(this.datas)
     fs.writeFileSync(this.path, datas)
+  }
+
+  public find(params?: IFind) {
+    let datas = this.datas
+
+    if (params) {
+      if (params.where) {
+        datas = datas.filter(data => eval(params.where))
+      }
+
+      if (params.limit && params.offset) {
+        datas = (datas.slice(params.offset, datas.length)).slice(0, params.limit)
+      }
+
+      if (params.limit) {
+        datas = datas.slice(0, params.limit)
+      }
+
+      if (params.offset) {
+        datas = datas.slice(params.offset, datas.length)
+      }
+    }
+
+    return datas;
   }
 }

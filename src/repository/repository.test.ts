@@ -19,4 +19,9 @@ users.add([{
 
 users.save()
 
-console.log(users)
+console.log(users.find({
+  limit: 10,
+  offset: 10
+}));
+
+console.log(users.find())
