@@ -7,8 +7,16 @@ const users = new Repository({
   db: DBuser,
   columns: [
     { name: 'id', type: 'number', isPrimary: true, autoIncrement: true },
-    { name: 'name', type: 'string' }
+    { name: 'name', type: 'string' },
+    { name: 'email', type: 'string', allowNull: true, default: 'funktodo2@gmail.com' }
   ]
 })
+
+users.add([{
+  name: 'The',
+  id: 4
+}])
+
+users.save()
 
 console.log(users)
