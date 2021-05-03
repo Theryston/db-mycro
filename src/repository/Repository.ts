@@ -4,10 +4,10 @@ import { Database } from '../database/Database'
 interface IColumn {
   name: string;
   type: 'string' | 'number' | 'array' | 'object' | 'boolean';
-  isPrimary ? : boolean;
-  autoIncrement ? : boolean;
-  default ? : any;
-  allowNull ? : boolean;
+  isPrimary?: boolean;
+  autoIncrement?: boolean;
+  default?: any;
+  allowNull?: boolean;
 }
 
 interface IRepository {
@@ -17,9 +17,9 @@ interface IRepository {
 }
 
 interface IFind {
-  where ? : string;
-  offset ? : number;
-  limit ? : number;
+  where?: string;
+  offset?: number;
+  limit?: number;
 }
 
 export class Repository {
@@ -27,7 +27,7 @@ export class Repository {
   public db: Database;
   public path: string;
   public columns: IColumn[];
-  private datas ? : object[];
+  private datas?: object[];
 
   constructor({ name, db, columns }: IRepository) {
     this.name = name;
@@ -69,7 +69,7 @@ export class Repository {
           data[this.columns[j].name] = this.columns[j].default
         }
 
-        if (typeof(datas[i][this.columns[j].name]) != this.columns[j].type || Array.isArray(datas[i][this.columns[j].name]) && this.columns[j].type != 'array') {
+        if (typeof (datas[i][this.columns[j].name]) != this.columns[j].type || Array.isArray(datas[i][this.columns[j].name]) && this.columns[j].type != 'array') {
           throw new Error(`invalid data type to add in column '${this.columns[j].name}' in repository '${this.name}' of db-mycro`)
         }
 
@@ -106,18 +106,16 @@ export class Repository {
       }
 
       if (params.limit && params.offset) {
-        datas = (datas.slice(params.offset, datas.length)).slice(0, params.limit)
-      }
-
-      if (params.limit) {
+        datas = datas.slice(params.offset, params.limit);
+      } else if (params.limit) {
         datas = datas.slice(0, params.limit)
-      }
-
-      if (params.offset) {
+      } else if (params.offset) {
         datas = datas.slice(params.offset, datas.length)
       }
     }
 
     return datas;
   }
+
+  public update(where: string, data: object) { }
 }

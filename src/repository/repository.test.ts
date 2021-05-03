@@ -21,7 +21,13 @@ users.save()
 
 console.log(users.find({
   limit: 10,
-  offset: 10
+  offset: 8
 }));
 
-console.log(users.find())
+console.log(users.update("data.id == 1", {
+  name: 'Theryyyyyyyyyyyy'
+}));
+
+console.log(users.find({
+  // offset: users.find().length-5
+}))
