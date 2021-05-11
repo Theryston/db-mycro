@@ -131,13 +131,13 @@ export class Repository {
 
       if (this.columns[j].isPrimary) {
         if (params.data[this.columns[j].name]) {
-          console.error(`A primary key cannot be updated!`)
           params.data[this.columns[j].name] = null
+          console.error(`A primary key cannot be updated!`)
         }
       }
 
       const indexes = []
-      for (let i in datas) {
+      for (let i = 0; i <= datas.length; i++) {
         const index = this.datas.findIndex((data, j) => eval(params.where) && j > indexes[indexes.length - 1])
         indexes.push(index)
       }
@@ -151,5 +151,15 @@ export class Repository {
     }
 
     return params.data;
+  }
+
+  public delete(where ? : string) {
+    const datas = this.datas.filter(data => eval(where))
+
+    try {
+      return datas.length
+    } catch (e) {
+      throw e
+    }
   }
 }

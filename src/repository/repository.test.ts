@@ -15,20 +15,19 @@ const users = new Repository({
 users.add([{
   name: 'The',
   id: 4
+}, {
+  name: 'bla'
 }])
 
-console.log(users.find({
-  limit: 10,
-  offset: 8,
-  where: "data.name == 'The'"
-}));
-
-
-
+/*
 console.log(users.update({
   where: "data.name == 'The'",
-  data: { name: 'Theryyyyyyyyyyyy', id: 4 }
-}));
+  data: { name: 'Theryyyyyyyyyyyy' }
+}));*/
+
+console.log(users.find())
+
+console.log(users.delete('data.id == 5'))
 
 console.log(users.find())
 
