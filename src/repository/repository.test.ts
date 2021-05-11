@@ -17,17 +17,19 @@ users.add([{
   id: 4
 }])
 
-users.save()
-
 console.log(users.find({
   limit: 10,
-  offset: 8
+  offset: 8,
+  where: "data.name == 'The'"
 }));
 
-console.log(users.update("data.id == 1", {
-  name: 'Theryyyyyyyyyyyy'
+
+
+console.log(users.update({
+  where: "data.name == 'The'",
+  data: { name: 'Theryyyyyyyyyyyy', id: 4 }
 }));
 
-console.log(users.find({
-  // offset: users.find().length-5
-}))
+console.log(users.find())
+
+users.save()
