@@ -4,10 +4,10 @@ import { Database } from '../database/Database'
 interface IColumn {
   name: string;
   type: 'string' | 'number' | 'array' | 'object' | 'boolean';
-  isPrimary ? : boolean;
-  autoIncrement ? : boolean;
-  default ? : any;
-  allowNull ? : boolean;
+  isPrimary?: boolean;
+  autoIncrement?: boolean;
+  default?: any;
+  allowNull?: boolean;
 }
 
 interface IRepository {
@@ -17,9 +17,9 @@ interface IRepository {
 }
 
 interface IFind {
-  where ? : string;
-  offset ? : number;
-  limit ? : number;
+  where?: string;
+  offset?: number;
+  limit?: number;
 }
 
 export class Repository {
@@ -27,7 +27,7 @@ export class Repository {
   public db: Database;
   public path: string;
   public columns: IColumn[];
-  private datas ? : object[];
+  private datas?: object[];
 
   constructor({ name, db, columns }: IRepository) {
     this.name = name;
@@ -69,7 +69,7 @@ export class Repository {
           data[this.columns[j].name] = this.columns[j].default
         }
 
-        if (typeof(datas[i][this.columns[j].name]) != this.columns[j].type || Array.isArray(datas[i][this.columns[j].name]) && this.columns[j].type != 'array') {
+        if (typeof (datas[i][this.columns[j].name]) != this.columns[j].type || Array.isArray(datas[i][this.columns[j].name]) && this.columns[j].type != 'array') {
           throw new Error(`invalid data type to add in column '${this.columns[j].name}' in repository '${this.name}' of db-mycro`)
         }
 
@@ -92,12 +92,12 @@ export class Repository {
     }
   }
 
-  public async save(): Promise < void > {
+  public async save(): Promise<void> {
     const datas = JSON.stringify(this.datas)
     fs.writeFileSync(this.path, datas)
   }
 
-  public find(params ? : IFind) {
+  public find(params?: IFind) {
     let datas = this.datas
 
     if (params) {
@@ -125,7 +125,7 @@ export class Repository {
         throw new Error(`the type of the '${this.columns[j].name}' value must be 'number' to use autoIncrement`)
       }
 
-      if (params.data[this.columns[j].name] && typeof(params.data[this.columns[j].name]) != this.columns[j].type || Array.isArray(params.data[this.columns[j].name]) && this.columns[j].type != 'array') {
+      if (params.data[this.columns[j].name] && typeof (params.data[this.columns[j].name]) != this.columns[j].type || Array.isArray(params.data[this.columns[j].name]) && this.columns[j].type != 'array') {
         throw new Error(`invalid data type to update in column '${this.columns[j].name}' in repository '${this.name}' of db-mycro`)
       }
 
@@ -153,10 +153,18 @@ export class Repository {
     return params.data;
   }
 
-  public delete(where ? : string) {
-    const datas = this.datas.filter(data => eval(where))
-
+  public delete(where?: string) {
     try {
+      const indexes = []
+      const datas = this.datas.filter((data, i) => {
+        if (eval(where)) {
+          indexes.push(i)
+          return true
+        }
+      })
+      indexes.forEach(index => {
+        this.datas.splice(index, 1)
+      });
       return datas.length
     } catch (e) {
       throw e

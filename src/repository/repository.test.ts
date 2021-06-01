@@ -12,12 +12,12 @@ const users = new Repository({
   ]
 })
 
-users.add([{
-  name: 'The',
-  id: 4
-}, {
-  name: 'bla'
-}])
+// users.add([{
+//   name: 'The',
+//   id: 4
+// }, {
+//   name: 'bla'
+// }])
 
 /*
 console.log(users.update({
@@ -27,7 +27,7 @@ console.log(users.update({
 
 console.log(users.find())
 
-console.log(users.delete('data.id == 5'))
+console.log(users.delete('data.email == "funktodo2@gmail.com"'))
 
 console.log(users.find())
 
