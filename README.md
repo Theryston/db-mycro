@@ -118,6 +118,6 @@ parameters:
  ```allowNull``` (boolean optional) if true the field cannot be null. default ```false```
  
  ### Repository Methods
- repositories have some methods that allow you to add, list, update, and delete data.
+ repositories have some methods that allow you to add, list, update, and delete data. never forget the [save method](#.save()).
  
- ####
+ ####.save()
