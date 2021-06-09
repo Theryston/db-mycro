@@ -103,4 +103,4 @@ parameters:
   ]
  ```
  
- the columns of a repository are what fields that repository will have.
+ the columns of a repository are the fields that the repository will have. They get an array of objects where each object has the essential settings for that column. and each of the objects has the following parameters:
