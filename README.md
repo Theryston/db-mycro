@@ -121,3 +121,8 @@ parameters:
  repositories have some methods that allow you to add, list, update, and delete data. never forget the [save method](#save).
  
  #### .save()
+ ```ts
+ Video.save()
+ ```
+ 
+ all changes that are made by any method in a repository ARE NOT SAVED they just change the local memory of the repository to ensure better performance of db-mycro. that's why you should always, after making the changes in the repository, execute the save method as in the example above (replacing "Video" by the variable that stores the instance of your repository)
