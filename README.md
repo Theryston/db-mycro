@@ -148,6 +148,16 @@ parameters:
  
  add data to a repository, receive an object array where each object must be of the explicit type in the ```type``` parameter in the column property
  
+ #### .update({ where: string, data: object })
+ ```ts
+ Video.update({
+  where: "data.id == 10",
+  data: { minutes: 15 }
+})
+ ```
+ 
+ update data based on the ```data``` property where a ```where``` property is true, you can access each data within the ```where``` property string by the ```data``` prefix
+ 
  #### .save()
  ```ts
  Video.save()
