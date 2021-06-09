@@ -127,6 +127,8 @@ parameters:
 }])
  ```
  
+ add data to a repository, receive an object array where each object must be of the explicit type in the ```type``` parameter in the column property
+ 
  #### .find(params?: { where?: string; offset?: number; limit?: number; })
  ```ts
  Video.find({
@@ -145,8 +147,6 @@ parameters:
  ```offset``` (number) after which index the data will be fetched.
  
  ```limit``` (number) a limit on how much data will be fetched
- 
- add data to a repository, receive an object array where each object must be of the explicit type in the ```type``` parameter in the column property
  
  #### .update({ where: string, data: object })
  ```ts
