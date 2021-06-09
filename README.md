@@ -105,6 +105,14 @@ parameters:
  
  the columns of a repository are the fields that the repository will have. They get an array of objects where each object has the essential settings for that column. and each of the objects has the following parameters:
  
- ```name``` (mandatory) the column name.
+ ```name``` (string mandatory) the column name.
  
- ```type``` (mandatory) the column type, can be of the types: ```'string' | 'number' | 'array' | 'object' | 'boolean'```
+ ```type``` (string mandatory) the column type, can be of the types: ```'string' | 'number' | 'array' | 'object' | 'boolean'```
+ 
+ ```isPrimary``` (boolean optional) indicates if the field is the id of that data. default ```false```
+ 
+ ```autoIncrement``` (boolean optional) if it is true for each insertion in the repository it will add 1 in this field. only works with type ```number```. default ```false```
+ 
+ ```default``` (optional and of the same type that was entered in the ```type``` parameter) this is a default value for if the column value is null. default ```null```
+ 
+ ```allowNull``` (boolean optional) if true the field cannot be null. default ```false```
