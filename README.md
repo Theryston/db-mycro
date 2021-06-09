@@ -84,3 +84,11 @@ const Video = new Repository({
   db: db_video
 })
 ```
+
+the repository receives an object with 3 mandatory parameters and returns an instance of the created repository.
+
+parameters:
+```save``` The repository name
+```columns``` it's a [columns](Repository columns)
+
+### Repository columns
