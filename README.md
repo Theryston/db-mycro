@@ -90,6 +90,6 @@ the repository receives an object with 3 mandatory parameters and returns an ins
 parameters:
 ```save``` The repository name
 
-```columns``` it's a [columns](#Repository columns)
+```columns``` it's a [columns](#repository-columns)
 
 ### Repository columns
