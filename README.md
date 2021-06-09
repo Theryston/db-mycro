@@ -35,7 +35,7 @@ the database method creates a database in which you will store your repositories
 ```
 
 ### Creating a new database
-the Database function takes two parameters the first is the ```name``` which is the name of the database and the second which is the ```path``` this is where your database should be saved
+the Database function takes two parameters the first is the ```name``` which is the database name and the second which is the ```path``` this is where your database should be saved and then the function returns an instance of the database created (instance in which it will be necessary to assign to the repositories)
 
 #### example
 ```ts
