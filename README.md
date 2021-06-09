@@ -107,7 +107,7 @@ parameters:
  
  ```name``` (string mandatory) the column name.
  
- ```type``` (string mandatory) the column type, can be of the types: ```'string' | 'number' | 'array' | 'object' | 'boolean'```
+ ```type``` (string mandatory) the column type, can be: ```'string' | 'number' | 'array' | 'object' | 'boolean'```
  
  ```isPrimary``` (boolean optional) indicates if the field is the id of that data. default ```false```
  
