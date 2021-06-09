@@ -89,10 +89,10 @@ the repository receives an object with 3 mandatory parameters and returns an ins
 
 parameters:
 
-```save``` The repository name.
+- ```save``` The repository name.
 
-```columns``` is [column](#repository-columns) type.
+- ```columns``` is [column](#repository-columns) type.
 
-```db``` An instance of the database where the repository belongs
+- ```db``` An instance of the database where the repository belongs
 
 ### Repository columns
