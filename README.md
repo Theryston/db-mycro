@@ -34,7 +34,8 @@ this is just an auxiliary database, designed to hold data that is not that impor
 ```
 
 # Docs
-Our database consists of 2 main methods, the database and the repository
+Our database consists of 2 main methods, the database and the repository.
+IMPORTANT: read the documentation until the end, pay careful attention to the save method
 
 ## Database
 the database method creates a database in which you will store your repositories (if you don't know what a repository in db-mycro is, read on).
