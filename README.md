@@ -158,6 +158,13 @@ parameters:
  
  update data based on the ```data``` property where a ```where``` property is true, you can access each data within the ```where``` property string by the ```data``` prefix
  
+ #### .delete(where?: string)
+ ```ts
+ Video.delete('data.id == 10')
+ ```
+ 
+ delete data based on where the ```where``` property is true, you can access each data within the ```where``` property string by the ```data``` prefix.
+ 
  #### .save()
  ```ts
  Video.save()
