@@ -139,6 +139,7 @@ parameters:
  returns the data registered in the repository. the only one that doesn't need the [save method](#save) to be executed after its execution
  
  receive optional parameters:
+ 
  ```where``` (string) a condition of what data will be returned. you can access each data from the ```data``` prefix.
  
  ```offset``` (number) after which index the data will be fetched.
