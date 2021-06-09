@@ -53,7 +53,7 @@ the database method creates a database in which you will store your repositories
 
 ### Creating a new database
 ```ts
-  const DBtestes = new Database('test', __dirname+'/../')
+  const db_video = new Database('video', __dirname)
 ```
 
 the Database function takes two parameters the first is the ```name``` which is the database name and the second which is the ```path``` this is where your database should be saved and then the function returns an instance of the database created (instance in which it will be necessary to assign to the repositories)
