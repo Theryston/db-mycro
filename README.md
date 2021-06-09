@@ -96,3 +96,11 @@ parameters:
 - ```db``` An instance of the database where the repository belongs
 
 ### Repository columns
+```ts
+  columns: [
+    { name: 'id', type: 'number', isPrimary: true, autoIncrement: true },
+    { name: 'minutes', type: 'number' }
+  ]
+ ```
+ 
+ the columns of a repository are what fields that repository will have.
