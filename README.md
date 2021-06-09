@@ -127,6 +127,24 @@ parameters:
 }])
  ```
  
+ #### .find(params?: { where?: string; offset?: number; limit?: number; })
+ ```ts
+ Video..find({
+ where: "data.minutes == 10",
+ offset: 2,
+ limit: 10
+ })
+ ```
+ 
+ returns the data registered in the repository. the only one that doesn't need the [save method](#save) to be executed after its execution
+ 
+ receive optional parameters:
+ ```where``` (string) a condition of what data will be returned. you can access each data from the ```data``` prefix.
+ 
+ ```offset``` (number) after which index the data will be fetched.
+ 
+ ```limit``` (number) a limit on how much data will be fetched
+ 
  add data to a repository, receive an object array where each object must be of the explicit type in the ```type``` parameter in the column property
  
  #### .save()
