@@ -6,5 +6,17 @@ Important: db-mycro IS NOT a database made to hold all your application data! re
 
 this is just an auxiliary database, designed to hold data that is not that important but that you need to keep. an example is when you need to save in the database how long of a video your user has watched, instead of overloading your main database (MySQL, MongoDB...) to save something simple like this, you can use db-mycro for that.
 
+# Install
+
+## npm
+```bash
+  npm i --save db-mycro
+```
+
+## yarn
+```bash
+  yarn add db-mycro
+```
+
 # Docs
 Our database consists of 2 main methods, the database and the repository
