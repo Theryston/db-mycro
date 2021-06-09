@@ -129,7 +129,7 @@ parameters:
  
  #### .find(params?: { where?: string; offset?: number; limit?: number; })
  ```ts
- Video..find({
+ Video.find({
  where: "data.minutes == 10",
  offset: 2,
  limit: 10
