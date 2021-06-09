@@ -5,7 +5,7 @@ a database that saves your data in a json file in your project folder.
 ```ts
 import { Database, Repository } from 'db-mycro';
 
-const db_video = new Database('video', __dirname+'/../')
+const db_video = new Database('video', __dirname)
 const Video = new Repository({
   name: 'video',
   columns: [
@@ -14,10 +14,6 @@ const Video = new Repository({
   ],
   db: db_video
 })
-
-Video.add([{
-  minutes: 10
-}])
 ```
 
 # Where to use?
