@@ -60,3 +60,16 @@ the Database function takes two parameters the first is the ```name``` which is 
 ```ts
   const DBtestes = new Database('test', __dirname+'/../')
 ```
+
+## Repository
+If you are familiar with MySQL, repositories are like a table in MySQL, if you are not familiar with MySQL, we will explain what a repository is in db-mycro.
+
+### import
+#### Javascript
+```js
+  const { Repository } = require('db-mycro');
+```
+#### Typescript
+```ts
+  import { Repository } from 'db-mycro';
+```
