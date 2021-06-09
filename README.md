@@ -116,3 +116,8 @@ parameters:
  ```default``` (optional and of the same type that was entered in the ```type``` parameter) this is a default value for if the column value is null. default ```null```
  
  ```allowNull``` (boolean optional) if true the field cannot be null. default ```false```
+ 
+ ### Repository Methods
+ repositories have some methods that allow you to add, list, update, and delete data.
+ 
+ ####
