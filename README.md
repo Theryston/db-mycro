@@ -74,3 +74,13 @@ A repository is an object that is created with a specific structure to store you
 ```
 
 ### Creating a new repository
+```ts
+const Video = new Repository({
+  name: 'video',
+  columns: [
+    { name: 'id', type: 'number', isPrimary: true, autoIncrement: true },
+    { name: 'minutes', type: 'number' }
+  ],
+  db: db_video
+})
+```
