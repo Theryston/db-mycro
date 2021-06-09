@@ -19,11 +19,11 @@ const users = new Repository({
 //   name: 'bla'
 // }])
 
-/*
-console.log(users.update({
-  where: "data.name == 'The'",
-  data: { name: 'Theryyyyyyyyyyyy' }
-}));*/
+
+// console.log(users.update({
+//   where: "data.name == 'The'",
+//   data: { name: 'Theryyyyyyyyyyyy' }
+// }));
 
 console.log(users.find())
 

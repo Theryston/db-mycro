@@ -1,6 +1,6 @@
 {
   "name": "db-mycro",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a database that saves your data in a json file in your project folder.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

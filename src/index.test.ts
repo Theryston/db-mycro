@@ -1,13 +1,23 @@
 import { Database, Repository } from './index';
 
-const DBtestes = new Database('test', __dirname+'/../')
-const test = new Repository({
-  name: 'testando',
+// create example
+const db_video = new Database('video', __dirname)
+const Video = new Repository({
+  name: 'video',
   columns: [
     { name: 'id', type: 'number', isPrimary: true, autoIncrement: true },
-    { name: 'test', type: 'string' }
+    { name: 'minutes', type: 'number' }
   ],
-  db: DBtestes
+  db: db_video
 })
 
-console.log(test)
+Video.add([{
+  minutes: 10
+}])
+
+// find example
+const videos = Video.find()
+console.log(videos)
+
+// save example
+Video.save()
