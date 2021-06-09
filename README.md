@@ -62,7 +62,9 @@ the Database function takes two parameters the first is the ```name``` which is 
 ```
 
 ## Repository
-If you are familiar with MySQL, repositories are like a table in MySQL, if you are not familiar with MySQL, we will explain what a repository is in db-mycro.
+If you are familiar with MySQL, repositories are like a table in MySQL, if you are not familiar with MySQL, we will explain what a repository is in the text below.
+
+A repository is an object that is created with a specific structure to store your data, for example, if you want to store the number of minutes a user spends watching a video, you can create a repository called ```video``` with a field called ```minutes``` which is the type ```number``` and whenever you need to save new data of the time the user spent watching your video, just save it in the ```minutes``` field of the ```video``` repository.
 
 ### import
 #### Javascript
