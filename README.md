@@ -33,3 +33,11 @@ the database method creates a database in which you will store your repositories
 ```ts
   import { Database } from 'db-mycro';
 ```
+
+### Creating a new database
+the Database function takes two parameters the first is the ```name``` which is the name of the database and the second which is the ```path``` this is where your database should be saved
+
+#### example
+```ts
+  const DBtestes = new Database('test', __dirname+'/../')
+```
