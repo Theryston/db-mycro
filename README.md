@@ -54,12 +54,11 @@ the database method creates a database in which you will store your repositories
 ```
 
 ### Creating a new database
-the Database function takes two parameters the first is the ```name``` which is the database name and the second which is the ```path``` this is where your database should be saved and then the function returns an instance of the database created (instance in which it will be necessary to assign to the repositories)
-
-#### example
 ```ts
   const DBtestes = new Database('test', __dirname+'/../')
 ```
+
+the Database function takes two parameters the first is the ```name``` which is the database name and the second which is the ```path``` this is where your database should be saved and then the function returns an instance of the database created (instance in which it will be necessary to assign to the repositories)
 
 ## Repository
 If you are familiar with MySQL, repositories are like a table in MySQL, if you are not familiar with MySQL, we will explain what a repository is in the text below.
@@ -75,3 +74,5 @@ A repository is an object that is created with a specific structure to store you
 ```ts
   import { Repository } from 'db-mycro';
 ```
+
+### Creating a new repository
