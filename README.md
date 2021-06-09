@@ -36,7 +36,7 @@ this is just an auxiliary database, designed to hold data that is not that impor
 # Docs
 Our database consists of 2 main methods, the database and the repository.
 
-IMPORTANT: read the documentation until the end, and never forget the save method.
+IMPORTANT: read the documentation until the end, and never forget the [save method](#save)
 
 ## Database
 the database method creates a database in which you will store your repositories (if you don't know what a repository in db-mycro is, read on).
@@ -118,6 +118,6 @@ parameters:
  ```allowNull``` (boolean optional) if true the field cannot be null. default ```false```
  
  ### Repository Methods
- repositories have some methods that allow you to add, list, update, and delete data. never forget the [save method](#.save()).
+ repositories have some methods that allow you to add, list, update, and delete data. never forget the [save method](#save).
  
  #### .save()
