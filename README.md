@@ -5,18 +5,18 @@ a database that saves your data in a json file in your project folder.
 ```ts
 import { Database, Repository } from 'db-mycro';
 
-const DBtest = new Database('test', __dirname+'/../')
-const Test = new Repository({
-  name: 'tests',
+const db_video = new Database('video', __dirname+'/../')
+const Video = new Repository({
+  name: 'video',
   columns: [
     { name: 'id', type: 'number', isPrimary: true, autoIncrement: true },
-    { name: 'name', type: 'string' }
+    { name: 'minutes', type: 'number' }
   ],
-  db: DBtest
+  db: db_video
 })
 
-Test.add([{
-  name: "test1"
+Video.add([{
+  minutes: 10
 }])
 ```
 
