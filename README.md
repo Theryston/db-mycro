@@ -1,6 +1,24 @@
 # db-mycro
 a database that saves your data in a json file in your project folder.
 
+```ts
+import { Database, Repository } from 'db-mycro';
+
+const DBtest = new Database('test', __dirname+'/../')
+const Test = new Repository({
+  name: 'tests',
+  columns: [
+    { name: 'id', type: 'number', isPrimary: true, autoIncrement: true },
+    { name: 'name', type: 'string' }
+  ],
+  db: DBtest
+})
+
+Test.add([{
+  name: "test1"
+}])
+```
+
 # Where to use?
 Important: db-mycro IS NOT a database made to hold all your application data! read the text below to better understand. 
 
