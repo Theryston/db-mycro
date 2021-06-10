@@ -1,6 +1,6 @@
 {
   "name": "db-mycro",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An npm package that increases the performance of your database by lessening its responsibility with JSON files.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
