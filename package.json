@@ -1,7 +1,7 @@
 {
   "name": "db-mycro",
-  "version": "0.1.4",
-  "description": "An npm package that increases the performance of your database by lessening its responsibility with JSON files.",
+  "version": "0.1.5",
+  "description": "A node module with a json database that saves data in a specific directory, similar to sqlite, but in JSON",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
