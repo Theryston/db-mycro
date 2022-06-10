@@ -134,6 +134,8 @@ parameters:
 
  ```allowNull``` (boolean optional) if true the field cannot be null. default ```false```
 
+ IMPORTANT: this is optional if the column was undefined or a empty array your repository will allow all data type, without validation
+
 ### Repository Methods
 
  repositories have some methods that allow you to add, list, update, and delete data. never forget the [save method](#save).
