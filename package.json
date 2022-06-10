@@ -1,6 +1,6 @@
 {
   "name": "db-mycro",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A node module with a json database that saves data in a specific directory, similar to sqlite, but in JSON",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
