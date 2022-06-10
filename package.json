@@ -6,10 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc --declaration",
-    "dev": "nodemon --watch src --exec \"ts-node-dev src/index.ts\" -e ts",
-    "test": "nodemon --watch src --exec \"ts-node-dev src/**.test.ts\" -e ts",
-    "test:repository": "nodemon --watch src --exec \"ts-node-dev src/repository/**.test.ts\" -e ts",
-    "test:database": "nodemon --watch src --exec \"ts-node-dev src/database/**.test.ts\" -e ts",
+    "run:all": "nodemon --watch src --exec \"ts-node-dev src/index.run.ts\" -e ts",
+    "run:repository": "nodemon --watch src --exec \"ts-node-dev src/repository/repository.run.ts\" -e ts",
+    "run:database": "nodemon --watch src --exec \"ts-node-dev src/database/database.run.ts\" -e ts",
     "commit": "git add . && git-cz && git push",
     "deploy": "yarn build && yarn publish"
   },
